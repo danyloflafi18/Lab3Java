@@ -44,22 +44,6 @@ public class InsuranceManager {
     }
 
     public List<Insurance> sortingAlphabeticallyInDescendingOrder(boolean descending) {
-        /*
-        return ships.sort(new Comparator<Ship>(){
-
-        @Override
-        public int compare(Ship o1, Ship o2){
-        return (int)(o1.getTonnage() - o2.getTonnage());
-        }
-        });
-        }
-
-
-
-
-
-        Collections.sort(ships, comparator.comparing(Ship::getTonnage).reversed());
-        */
         Comparator<Insurance> comparator =
                 (Insurance obj1, Insurance obj2)
                         -> obj1.getName().compareTo(obj2.getName());
