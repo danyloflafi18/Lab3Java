@@ -6,15 +6,19 @@ public class Insurance {
     private String surname;
     private int numberOfDays;
     private String telephone;
+    private InsuranceType insuranceType; 
 
     public Insurance() {
     }
 
-    public Insurance(String name, String surname, int numberOfDays, String telephone) {
+    public Insurance(final String name, final String surname, 
+    		final int numberOfDays, final String telephone, 
+    		final InsuranceType insuranceType) {
         this.name = name;
         this.surname = surname;
         this.numberOfDays = numberOfDays;
         this.telephone = telephone;
+        this.insuranceType = insuranceType;
     }
 
 
@@ -33,7 +37,7 @@ public class Insurance {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -41,7 +45,7 @@ public class Insurance {
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public void setSurname(final String surname) {
         this.surname = surname;
     }
 
@@ -49,7 +53,7 @@ public class Insurance {
         return numberOfDays;
     }
 
-    public void setNumberOfDays(int numberOfDays) {
+    public void setNumberOfDays(final int numberOfDays) {
         this.numberOfDays = numberOfDays;
     }
 
@@ -57,7 +61,15 @@ public class Insurance {
         return telephone;
     }
 
-    public void setTelephone(String telephone) {
+    public void setTelephone(final String telephone) {
         this.telephone = telephone;
     }
+
+	public InsuranceType getInsuranceType() {
+		return insuranceType;
+	}
+
+	public void setInsuranceType(InsuranceType insuranceType) {
+		this.insuranceType = insuranceType;
+	}
 }

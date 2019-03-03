@@ -1,17 +1,18 @@
 package ua.lviv.iot.insurance.models;
 
-public class Health extends Insurance{
+public class Health extends Insurance {
 
     private boolean prematureDeath;
     private DangerLevel accident;
     private DangerLevel invalidity;
 
-    public Health(){
+    public Health() { 
     }
 
-    public Health(String name, String surname, int numberOfDays, String telephone,
-                  boolean prematureDeath, DangerLevel accident,DangerLevel invalidity){
-        super(name,surname,numberOfDays,telephone);
+    public Health(final String name, final String surname, final int numberOfDays, 
+    		final String telephone, final InsuranceType insuranceType,
+    		final boolean prematureDeath, final DangerLevel accident,final DangerLevel invalidity) { 
+        super(name,surname,numberOfDays,telephone, insuranceType);
         this.prematureDeath = prematureDeath;
         this.accident = accident;
         this.invalidity = invalidity;
@@ -21,7 +22,7 @@ public class Health extends Insurance{
         return prematureDeath;
     }
 
-    public void setPrematureDeath(boolean prematureDeath) {
+    public void setPrematureDeath(final boolean prematureDeath) {
         this.prematureDeath = prematureDeath;
     }
 
@@ -29,7 +30,7 @@ public class Health extends Insurance{
         return accident;
     }
 
-    public void setAccident(DangerLevel accident) {
+    public void setAccident(final DangerLevel accident) {
         this.accident = accident;
     }
 
@@ -37,7 +38,7 @@ public class Health extends Insurance{
         return invalidity;
     }
 
-    public void setInvalidity(DangerLevel invalidity) {
+    public void setInvalidity(final DangerLevel invalidity) {
         this.invalidity = invalidity;
     }
 }
