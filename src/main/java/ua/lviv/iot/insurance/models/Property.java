@@ -6,15 +6,11 @@ public class Property extends Insurance {
     private DangerLevel waterDangerLevel;
     private DangerLevel theftDangerLevel;
 
-
     public Property() {
     }
 
-    public Property(final String name, final String surname,
-            final int numberOfDays, final String telephone,
-            final InsuranceType insuranceType,
-            final DangerLevel fireDangerLevel,
-            final DangerLevel waterDangerLevel) {
+    public Property(final String name, final String surname, final int numberOfDays, final String telephone,
+            final InsuranceType insuranceType, final DangerLevel fireDangerLevel, final DangerLevel waterDangerLevel) {
         super(name, surname, numberOfDays, telephone, insuranceType);
         this.fireDangerLevel = fireDangerLevel;
         this.waterDangerLevel = waterDangerLevel;

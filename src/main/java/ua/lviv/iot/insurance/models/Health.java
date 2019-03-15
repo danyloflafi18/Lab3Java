@@ -9,13 +9,8 @@ public class Health extends Insurance {
     public Health() {
     }
 
-    public Health(final String name,
-        final String surname,
-        final int numberOfDays,
-        final String telephone,
-        final InsuranceType insuranceType,
-        final boolean prematureDeath,
-        final DangerLevel accident) {
+    public Health(final String name, final String surname, final int numberOfDays, final String telephone,
+            final InsuranceType insuranceType, final boolean prematureDeath, final DangerLevel accident) {
         super(name, surname, numberOfDays, telephone, insuranceType);
         this.prematureDeath = prematureDeath;
         this.accident = accident;

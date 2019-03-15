@@ -9,11 +9,8 @@ public class Personal extends Insurance {
 
     }
 
-    public Personal(final String name,
-    final String surname, final int numberOfDays,
-    final String telephone, final InsuranceType insuranceType,
-    final DangerLevel medicalAssistance,
-    final DangerLevel accident) {
+    public Personal(final String name, final String surname, final int numberOfDays, final String telephone,
+            final InsuranceType insuranceType, final DangerLevel medicalAssistance, final DangerLevel accident) {
         super(name, surname, numberOfDays, telephone, insuranceType);
         this.medicalAssistance = medicalAssistance;
         this.accident = accident;
@@ -31,8 +28,7 @@ public class Personal extends Insurance {
         return medicalAssistance;
     }
 
-    public final void setMedicalAssistance(
-            final DangerLevel medicalAssistance) {
+    public final void setMedicalAssistance(final DangerLevel medicalAssistance) {
         this.medicalAssistance = medicalAssistance;
     }
 }
