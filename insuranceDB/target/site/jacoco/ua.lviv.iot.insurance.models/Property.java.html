@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Property.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dp-sample</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.insurance.models</a> &gt; <span class="el_source">Property.java</span></div><h1>Property.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.insurance.models;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@DiscriminatorValue(&quot;childClass&quot;)
+public class Property extends Insurance {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @Column
+    private DangerLevel fireDangerLevel;
+    @Column
+    private DangerLevel waterDangerLevel;
+    @Column
+    private DangerLevel theftDangerLevel;
+
+<span class="fc" id="L25">    public Property() {</span>
+<span class="fc" id="L26">    }</span>
+
+    public Property(final String name, final String surname, final int numberOfDays, final String telephone,
+            final InsuranceType insuranceType, final DangerLevel fireDangerLevel, final DangerLevel waterDangerLevel) {
+<span class="fc" id="L30">        super(name, surname, numberOfDays, telephone, insuranceType);</span>
+<span class="fc" id="L31">        this.fireDangerLevel = fireDangerLevel;</span>
+<span class="fc" id="L32">        this.waterDangerLevel = waterDangerLevel;</span>
+<span class="fc" id="L33">    }</span>
+
+    public Integer getId() {
+<span class="nc" id="L36">        return id;</span>
+    }
+
+    public void setId(final Integer id) {
+<span class="nc" id="L40">        this.id = id;</span>
+<span class="nc" id="L41">    }</span>
+
+    public final DangerLevel getFireDangerLevel() {
+<span class="nc" id="L44">        return fireDangerLevel;</span>
+    }
+
+    public final void setFireDangerLevel(final DangerLevel fireDangerLevel) {
+<span class="nc" id="L48">        this.fireDangerLevel = fireDangerLevel;</span>
+<span class="nc" id="L49">    }</span>
+
+    public final DangerLevel getWaterDangerLevel() {
+<span class="nc" id="L52">        return waterDangerLevel;</span>
+    }
+
+    public final void setWaterDangerLevel(final DangerLevel waterDangerLevel) {
+<span class="nc" id="L56">        this.waterDangerLevel = waterDangerLevel;</span>
+<span class="nc" id="L57">    }</span>
+
+    public final DangerLevel getTheftDangerLevel() {
+<span class="nc" id="L60">        return theftDangerLevel;</span>
+    }
+
+    public final void setTheftDangerLevel(final DangerLevel theftDangerLevel) {
+<span class="nc" id="L64">        this.theftDangerLevel = theftDangerLevel;</span>
+<span class="nc" id="L65">    }</span>
+
+    @Override
+    public final String getHeaders() {
+<span class="nc" id="L69">        return super.getHeaders() + &quot;,&quot; + &quot;Fire danger level&quot; + &quot;,&quot; + &quot;Water danger level&quot; + &quot;,&quot; + &quot;Theft danger level&quot;;</span>
+    }
+
+    @Override
+    public final String toCSV() {
+<span class="nc" id="L74">        return super.toCSV() + &quot;,&quot; + this.getFireDangerLevel() + &quot;,&quot; + this.getWaterDangerLevel() + &quot;,&quot;</span>
+<span class="nc" id="L75">                + this.getTheftDangerLevel();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

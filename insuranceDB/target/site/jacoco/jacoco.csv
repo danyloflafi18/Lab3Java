@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+dp-sample,ua.lviv.iot.insurance,InsuranceController,41,0,0,0,9,0,6,0,6,0
+dp-sample,ua.lviv.iot.insurance,ApplicationDB,59,0,0,0,9,0,4,0,4,0
+dp-sample,ua.lviv.iot.insurance.models,Property,61,17,0,0,15,6,10,2,10,2
+dp-sample,ua.lviv.iot.insurance.models,Health,54,17,0,0,11,6,8,2,8,2
+dp-sample,ua.lviv.iot.insurance.models,Insurance,53,66,0,0,11,17,6,9,6,9
+dp-sample,ua.lviv.iot.insurance.models,DangerLevel,0,34,0,0,0,2,0,1,0,1
+dp-sample,ua.lviv.iot.insurance.models,InsuranceType,0,34,0,0,0,2,0,1,0,1
+dp-sample,ua.lviv.iot.insurance.models,Personal,8,51,0,0,4,10,2,6,2,6
+dp-sample,ua.lviv.iot.insurance.managers,InsuranceWriter,0,59,0,4,0,13,0,4,0,2
+dp-sample,ua.lviv.iot.insurance.managers,InsuranceManager,80,0,2,0,20,0,14,0,13,0

@@ -1,0 +1,14 @@
+Name,Surname,NumberOfDays,Telephone,InsuranceType,Accident,Medical assistance
+Oleh,Klochnyk,7,0934284939,HEALTH,LOW,LOW
+
+Name,Surname,NumberOfDays,Telephone,InsuranceType,Accident,Medical assistance
+Yaroslav,Klochnyk,5,0934284930,HEALTH,LOW,LOW
+
+Name,Surname,NumberOfDays,Telephone,InsuranceType,Accident,Medical assistance
+Yaroslav,Chuchma,21,0934284935,HEALTH,LOW,LOW
+
+Name,Surname,NumberOfDays,Telephone,InsuranceType,Accident,Medical assistance
+Petro,Klochnyk,10,0934284938,HEALTH,LOW,LOW
+
+Name,Surname,NumberOfDays,Telephone,InsuranceType,Accident,Medical assistance
+null,null,0,null,null,null,null

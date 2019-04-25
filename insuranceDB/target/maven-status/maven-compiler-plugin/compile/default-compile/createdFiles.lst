@@ -1,0 +1,12 @@
+ua\lviv\iot\insurance\managers\InsuranceWriter.class
+ua\lviv\iot\insurance\models\DangerLevel.class
+ua\lviv\iot\insurance\PropertyRepository.class
+ua\lviv\iot\insurance\ApplicationDB.class
+ua\lviv\iot\insurance\models\Health.class
+ua\lviv\iot\insurance\managers\InsuranceManager.class
+ua\lviv\iot\insurance\models\Property.class
+ua\lviv\iot\insurance\models\Personal.class
+ua\lviv\iot\insurance\managers\SortOfMethodsInsurance.class
+ua\lviv\iot\insurance\InsuranceController.class
+ua\lviv\iot\insurance\models\InsuranceType.class
+ua\lviv\iot\insurance\models\Insurance.class

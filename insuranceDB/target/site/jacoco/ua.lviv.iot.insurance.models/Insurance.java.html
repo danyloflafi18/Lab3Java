@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Insurance.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dp-sample</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.insurance.models</a> &gt; <span class="el_source">Insurance.java</span></div><h1>Insurance.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.insurance.models;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = &quot;type&quot;, discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue(value = &quot;ParentClass&quot;)
+public class Insurance {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @Column
+    private String name;
+    @Column
+    private String surname;
+    @Column
+    private int numberOfDays;
+    @Column
+    private String telephone;
+    @Column
+    private InsuranceType insuranceType;
+
+    public Insurance() {
+<span class="fc" id="L35">        super();</span>
+<span class="fc" id="L36">    }</span>
+
+    public Insurance(final String name, final String surname, final int numberOfDays, final String telephone,
+<span class="fc" id="L39">            final InsuranceType insuranceType) {</span>
+<span class="fc" id="L40">        this.name = name;</span>
+<span class="fc" id="L41">        this.surname = surname;</span>
+<span class="fc" id="L42">        this.numberOfDays = numberOfDays;</span>
+<span class="fc" id="L43">        this.telephone = telephone;</span>
+<span class="fc" id="L44">        this.insuranceType = insuranceType;</span>
+<span class="fc" id="L45">    }</span>
+
+    @Override
+    public final String toString() {
+<span class="nc" id="L49">        return &quot;Insurance{&quot; + &quot;name='&quot; + name + '\'' + &quot;, surname='&quot; + surname + '\'' + &quot;, numberOfDays=&quot; + numberOfDays</span>
+                + &quot;, telephone='&quot; + telephone + '\'' + '}';
+    }
+
+    public final String getName() {
+<span class="fc" id="L54">        return name;</span>
+    }
+
+    public final void setName(final String name) {
+<span class="nc" id="L58">        this.name = name;</span>
+<span class="nc" id="L59">    }</span>
+
+    public final String getSurname() {
+<span class="fc" id="L62">        return surname;</span>
+    }
+
+    public final void setSurname(final String surname) {
+<span class="nc" id="L66">        this.surname = surname;</span>
+<span class="nc" id="L67">    }</span>
+
+    public final int getNumberOfDays() {
+<span class="fc" id="L70">        return numberOfDays;</span>
+    }
+
+    public final void setNumberOfDays(final int numberOfDays) {
+<span class="nc" id="L74">        this.numberOfDays = numberOfDays;</span>
+<span class="nc" id="L75">    }</span>
+
+    public final String getTelephone() {
+<span class="fc" id="L78">        return telephone;</span>
+    }
+
+    public final void setTelephone(final String telephone) {
+<span class="nc" id="L82">        this.telephone = telephone;</span>
+<span class="nc" id="L83">    }</span>
+
+    public final InsuranceType getInsuranceType() {
+<span class="fc" id="L86">        return insuranceType;</span>
+    }
+
+    public final void setInsuranceType(final InsuranceType insuranceType) {
+<span class="nc" id="L90">        this.insuranceType = insuranceType;</span>
+<span class="nc" id="L91">    }</span>
+
+    public String getHeaders() {
+<span class="fc" id="L94">        return &quot;Name&quot; + &quot;,&quot; + &quot;Surname&quot; + &quot;,&quot; + &quot;NumberOfDays&quot; + &quot;,&quot; + &quot;Telephone&quot; + &quot;,&quot; + &quot;InsuranceType&quot;;</span>
+    }
+
+    public String toCSV() {
+<span class="fc" id="L98">        return this.getName() + &quot;,&quot; + this.getSurname() + &quot;,&quot; + this.getNumberOfDays() + &quot;,&quot; + this.getTelephone() + &quot;,&quot;</span>
+<span class="fc" id="L99">                + this.getInsuranceType();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
